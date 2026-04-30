@@ -11,12 +11,8 @@
       "destination": "/api/:path*"
     },
     {
-      "source": "/",
-      "destination": "/client/build/index.html"
-    },
-    {
       "source": "/(.*)",
-      "destination": "/client/build/$1"
+      "destination": "/index.html"
     }
   ]
 }
