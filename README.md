@@ -126,3 +126,15 @@ npm start
 ```
 
 The backend serves the compiled frontend automatically when `client/build` exists.
+
+## Vercel Deployment
+
+This repository is configured for Vercel with static frontend hosting plus serverless API routes under `api/`.
+
+Set these environment variables in your Vercel project:
+
+- `GROQ_API_KEY`
+- `GROQ_MODEL` if you want to override the default `llama-3.1-8b-instant`
+- `GROQ_MAX_TOKENS` if you want to tune response size
+
+Deploy from the repository root. The frontend is served from `client/build`, and `/api/compiler/compile` plus `/api/eval/run-all` are handled by Vercel functions.
